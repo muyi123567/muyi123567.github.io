@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小海</title>
+<meta name="description" content="小海的个人主页">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#16181d; --muted:#6b7280; --line:#e5e7eb; --accent:#0f766e;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1115; --fg:#e8eaed; --muted:#9aa0a6; --line:#242833; --accent:#5eead4; }
+  }
+  *{ box-sizing:border-box }
+  html,body{ margin:0; padding:0 }
+  body{
+    background:var(--bg); color:var(--fg);
+    font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:56px 24px; -webkit-font-smoothing:antialiased;
+  }
+  main{ width:100%; max-width:560px }
+  h1{ font-size:26px; line-height:1.3; margin:0 0 4px; letter-spacing:0; font-weight:650 }
+  .domain{ color:var(--muted); font-size:14px; margin:0 0 30px }
+  p{ margin:0 0 14px }
+  .links{ margin-top:34px; padding-top:22px; border-top:1px solid var(--line); display:flex; gap:22px; flex-wrap:wrap }
+  a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:1px }
+  a:hover,a:focus-visible{ border-bottom-color:currentColor; outline:none }
+  footer{ margin-top:38px; color:var(--muted); font-size:13px }
+</style>
+</head>
+<body>
+<main>
+  <h1>小海</h1>
+  <p class="domain">xiaoxiaohai.website</p>
+
+  <p>个人主页。</p>
+  <p>平时写点代码、折腾点小工具，偶尔把用过的东西记下来。</p>
+
+  <nav class="links">
+    <a href="https://github.com/muyi123567">GitHub</a>
+  </nav>
+
+  <footer>© <span id="y"></span> xiaoxiaohai.website</footer>
+</main>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
